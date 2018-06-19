@@ -9,7 +9,7 @@ buildscript {
     }
 }
 
-group 'com.wallace.math'
+group 'com.wallace.math.complex'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'kotlin'
