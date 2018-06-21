@@ -10,6 +10,7 @@ buildscript {
 }
 plugins {
     id "com.jfrog.bintray" version "1.8.2"
+    id 'com.palantir.git-version' version '0.11.0'
 }
 repositories {
     mavenCentral()
@@ -17,7 +18,7 @@ repositories {
 }
 
 group 'com.wallace.math.complex'
-version '0.0'
+version gitVersion()
 
 apply plugin: 'kotlin'
 apply plugin: 'java'
@@ -47,7 +48,7 @@ bintray {
         version {
             name = "${project.version}"
             released = new Date()
-            vcsTag = '0.0.0'
+            vcsTag = "${project.version}"
             configurations = ['archives']
         }
     }
